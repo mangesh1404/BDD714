@@ -11,7 +11,8 @@ import cucumber.api.junit.Cucumber;
 		glue="com.stepdefs",
 		plugin="html:target",
 		dryRun=false,// to compile feature file
-		monochrome=true// to get readbable output in the console
+		monochrome=true,// to get readbable output in the console
+		tags="@run" // to run a specific Scenario/feature
 		)
 
 public class TestRunner {

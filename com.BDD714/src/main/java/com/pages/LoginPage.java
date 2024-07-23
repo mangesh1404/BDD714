@@ -29,6 +29,15 @@ public class LoginPage {
 		loginBtn.click();
 	}
 	
+	public void testLogin(String uname, String pass) {
+		username.sendKeys(uname);
+		password.sendKeys(pass);
+	}
+	
+	public void clickLoginBtn() {
+		loginBtn.click();
+	}
+	
 	public boolean verifyLogo() {
 		
 		return logo.isDisplayed();

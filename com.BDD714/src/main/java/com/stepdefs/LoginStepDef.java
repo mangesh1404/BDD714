@@ -34,9 +34,14 @@ public class LoginStepDef extends BaseClass {
 		driver.get(PropertiesUtils.readproperty("url"));
 	}
 
-	@When("^user enters valid credentials$")
-	public void user_enters_valid_credentials() throws Throwable {
-	    lp.loginToApplication();
+	@When("^user enters \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void user_enters_and(String uname, String pass) throws Throwable {
+	    lp.testLogin(uname, pass);
+	}
+
+	@When("^user click on login button$")
+	public void user_click_on_login_button() throws Throwable {
+		lp.clickLoginBtn();
 	}
 
 	@Then("^user should be on home page$")
